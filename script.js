@@ -123,3 +123,23 @@ if (form) {
   payBtn.addEventListener("click", pay);
   waBtn.addEventListener("click", viaWhatsApp);
 }
+
+const cd = $("#cd");
+if (cd) {
+  const end = new Date("2026-12-01T00:00:00+01:00").getTime(); // Dec 1st, Lagos time
+  const pad = n => String(n).padStart(2, "0");
+  const set = (id, v) => { $(id).textContent = pad(v); };
+  const tick = () => {
+    const s = Math.floor(Math.max(0, end - Date.now()) / 1000);
+    if (s === 0) {
+      clearInterval(timer);
+      cd.querySelector(".cd-grid").hidden = true;
+      $("#cd-title").textContent = "It’s December! Time to Code This Christmas.";
+      return;
+    }
+    set("#cd-d", Math.floor(s / 86400)); set("#cd-h", Math.floor(s % 86400 / 3600));
+    set("#cd-m", Math.floor(s % 3600 / 60)); set("#cd-s", s % 60);
+  };
+  const timer = setInterval(tick, 1000);
+  tick();
+}

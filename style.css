@@ -109,3 +109,10 @@ footer h4{color:#fff;margin:0 0 10px}footer a{display:block;padding:3px 0}footer
 
 .btn:disabled{opacity:.6;cursor:wait;transform:none}
 form .btn{width:100%}
+
+.cd{padding:36px 0 8px}
+.cd-box{max-width:760px;margin:0 auto;text-align:center;border-radius:24px;padding:28px 22px;background:linear-gradient(var(--card),var(--card)) padding-box,var(--grad) border-box;border:2px solid transparent;box-shadow:0 0 50px rgba(59,130,246,.25)}
+.cd-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:18px}
+.cd-grid div{background:#0a1230;border-radius:16px;padding:14px 4px;border:1px solid rgba(255,255,255,.08)}
+.cd-grid b{display:block;font-size:clamp(1.7rem,7vw,2.8rem);line-height:1.1;font-variant-numeric:tabular-nums;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.cd-grid small{color:var(--muted);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase}
